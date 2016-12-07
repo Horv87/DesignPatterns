@@ -5,19 +5,18 @@ package at.martin.designpatterns;
  */
 public class Singleton {
 
-    private Singleton instance;
+    private static Singleton instance;
 
     private Singleton() {
 
 
     }
 
-    public Singleton getInstance() {
+    public static Singleton getInstance() {
 
         if (instance == null){
             instance = new Singleton();
         }
-
         return instance;
 
     }
