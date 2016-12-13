@@ -8,7 +8,7 @@ The Factory Pattern uses inheritance to delegate object creation via methods to 
 [For details see Wikipedia](https://en.wikipedia.org/wiki/Factory_method_pattern)
 ## Advantages
 
-* Complex object creation is now be handled by sub-classes.
+* Complex object creation is now handled by sub-classes.
 * Additional sub-classes can be added without much trouble.
 
 
@@ -18,7 +18,7 @@ The Factory Pattern uses inheritance to delegate object creation via methods to 
 **RandomQuoteGenerator.java** is an abstract class that leaves the implementation
 of the `generateQuotes()` method to its sub-classes.
 
-**Quote.java** is the abstract class that we uses as a template. Again implementation is
+**Quote.java** is the abstract class that we uses as a template for concrete implementations. Again implementation is
 left for the sub-classes
 
 **SimpleQuote.java** inherits from _Quote.java_ and contains concrete implementation.
