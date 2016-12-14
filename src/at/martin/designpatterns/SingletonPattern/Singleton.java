@@ -1,4 +1,4 @@
-package at.martin.designpatterns;
+package at.martin.designpatterns.SingletonPattern;
 
 /**
  * Created by martin on 07.12.16.
