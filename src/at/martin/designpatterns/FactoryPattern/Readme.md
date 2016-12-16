@@ -1,7 +1,7 @@
 # Factory Pattern Example
 
-In this example we have a non-function **Random Quote Generator** which
-can show quotes in **simple** or **fancy** mode.
+In this example we have a **SpellFactory** which
+can create three different kind of magic spells.
 
 ## About
 The Factory Pattern uses inheritance to delegate object creation via methods to subclasses.
@@ -15,18 +15,13 @@ The Factory Pattern uses inheritance to delegate object creation via methods to 
 
 ## Example Structure
 
-**RandomQuoteGenerator.java** is an abstract class that leaves the implementation
-of the `generateQuotes()` method to its sub-classes.
+**Spell.java** is the abstract base class for all other spell types.
 
-**Quote.java** is the abstract class that we uses as a template for concrete implementations. Again implementation is
-left for the sub-classes
+**IceSpell.java** inherits from `Spell.java` - concrete implementation of an spell
 
-**SimpleQuote.java** inherits from _Quote.java_ and contains concrete implementation.
+**FireSpell.java** inherits from `Spell.java` - concrete implementation of an spell
 
-**FancyQuote.java** inherits from _Quote.java_ and contains concrete implementation.
+**LightningSpell.java** inherits from `Spell.java` - concrete implementation of an spell
 
-**SimpleQuoteGenerator.java** inherits from _RandomQuoteGenerator_. Its `generateQuotes()`
-method creates a new _SimpleQuote_ Object.
-
-**FancyQuoteGenerator.java** inherits from _RandomQuoteGenerator_. Its `generateQuotes()`
-method creates a new _FancQuote_ Object.
+**SpellFactory.java** contains a static factory method `createSpell(String type)` with logic to
+determine which kind of spell object should be created based on a given input.
